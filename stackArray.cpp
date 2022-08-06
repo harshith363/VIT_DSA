@@ -22,6 +22,7 @@ class stackArray{
 					  We declare this function to return integer value,i.e. the popped element.*/
 			if(top==-1){
 				cout<<"Stack underflow"<<endl;
+				return 9999;
 			}
 			else{
 				int x=arr[top];
@@ -33,9 +34,10 @@ class stackArray{
 			if(top==-1)
 				cout<<"No elements pushed";
 			else{
-				for(int i=0;i<MAX;i++){
+				for(int i=0;i<=top;i++){
 					cout<<arr[i]<<"  ";
 				}
+				cout<<endl;
 			}
 		}
 };
@@ -45,12 +47,12 @@ int main(){
 	int choice;
 	stk.init();
 	do{
-		cout<<"Enter your choice:\n1.Push an element\n2.Pop an element\n3.Display the Stack\n4.Exit";
+		cout<<"Enter your choice:\n1.Push an element\n2.Pop an element\n3.Display the Stack\n4.Exit\n";
 		cin>>choice;
 		switch (choice)
 		{
 		case 1:{
-			cout<<"Push";
+			cout<<"Push:";
 			int data;
 			cin>>data;
 			stk.push(data);
